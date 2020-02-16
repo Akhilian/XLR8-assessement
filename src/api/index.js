@@ -18,10 +18,12 @@ class API {
         return records.map(Capability.fromAirtable)
     }
 
-    async addRespondent() {
+    async addRespondent({ name = '' }) {
         const respondent = await this._client('Respondent').create([
             {
-              "fields": {}
+              "fields": {
+                "Alias": name
+              }
             }
         ])
 

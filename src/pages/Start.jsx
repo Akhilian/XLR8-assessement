@@ -5,10 +5,10 @@ const Start = props => {
     return (
         <div className="start-survey">
             <h1>Accelerate assessment</h1>
-            {/* <img src="./programing.svg" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis laoreet posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>*/}
+            <p>Les textes utilisés dans cette application sont issus du livre <q>ACCELERATE - The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations</q></p>
+
             <Link className="start-survey-button" to="/survey">
-                Démarrer le sondage
+                Démarrer l'évaluation
             </Link>
         </div>
     )

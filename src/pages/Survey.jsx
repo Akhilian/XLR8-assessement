@@ -16,7 +16,7 @@ export default class Survey extends PureComponent {
     componentDidMount() {
         const api = new API()
 
-        api.addRespondent().then((respondent) => {
+        api.addRespondent({}).then((respondent) => {
             this.setState({ respondent })
         })
 

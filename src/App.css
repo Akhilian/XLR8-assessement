@@ -104,7 +104,7 @@ input[type=radio]:checked ~ label {
   border-color: #233558;
 }
 
-label {
+.answer-option label {
   height: 1rem;
   width: 1rem;
   content: '';
@@ -177,6 +177,7 @@ label {
   padding: 1rem;
   border-radius: 0.2rem;
   color: white;
+  text-decoration: none;
 }
 
 /* SwipeIcon */
@@ -195,4 +196,30 @@ label {
   .swipe-explaination {
     display: block
   }
+}
+
+/* WHO */
+
+.who {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 40rem;
+  border-radius: 1rem;
+
+  align-items: flex-start;
+}
+
+.who input {
+  font-size: 2rem;
+  background-color: #233A59;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  color: white;
+}
+
+.who label {
+  font-size: 2rem;
 }
