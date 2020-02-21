@@ -69,30 +69,28 @@ h1 {
 .question {
   display: flex;
   flex-direction: column;
-  /* border-radius: 0.5rem;
-  -webkit-box-shadow: 10px 6px 58px -8px rgba(0,0,0,0.16);
-  -moz-box-shadow: 10px 6px 58px -8px rgba(0,0,0,0.16);
-  box-shadow: 10px 6px 58px -8px rgba(0,0,0,0.16);   */
 }
 
-.question-content {
-  padding: 1rem;
+.question-content > * {
+  margin: 1rem 0;
 }
 
 .available-answers {
   display: flex;
-
-  padding: 1rem 2rem;
   justify-content: space-between;
 }
 
 .answer-option {
   display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
   flex-direction: column;
+  justify-content: center;
 }
 
 .answer-option input {
   margin-bottom: 0.5rem;
+  display: none;
 }
 
 input[type=radio]:focus ~ label {
@@ -105,20 +103,51 @@ input[type=radio]:checked ~ label {
 }
 
 .answer-option label {
-  height: 1rem;
-  width: 1rem;
+  margin: auto;
+  height: 2rem;
+  width: 2rem;
   content: '';
-  position: absolute;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: 2px solid #233558;
   background-color: white;
 }
 
-.scale {
-  padding: 0 2rem;
+.answer-option.neutral label {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
+.answer-option.slightly label {
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.answer-option.relatively label {
+  height: 1.9rem;
+  width: 1.9rem;
+}
+
+.answer-option.fully label {
+  height: 2.1rem;
+  width: 2.1rem;
+}
+
+.scale {
   display: flex;
   justify-content: space-between;
+}
+
+.scale div {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.scale-left {
+  text-align: left;
+}
+
+.scale-right {
+  text-align: right;
 }
 
 .description {
@@ -144,7 +173,7 @@ input[type=radio]:checked ~ label {
 }
 
 .progression-bar {
-  
+
   height: 1rem;
   border-radius: 1rem;
   width: 100%;
