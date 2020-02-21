@@ -72,7 +72,7 @@ h1 {
 }
 
 .question-content > * {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .available-answers {
@@ -173,7 +173,6 @@ input[type=radio]:checked ~ label {
 }
 
 .progression-bar {
-
   height: 1rem;
   border-radius: 1rem;
   width: 100%;
