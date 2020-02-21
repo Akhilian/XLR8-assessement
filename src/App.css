@@ -176,6 +176,7 @@ input[type=radio]:checked ~ label {
   background: linear-gradient(-90deg, #FF004E, #FF2222);
   padding: 1rem;
   border-radius: 0.2rem;
+  text-decoration: none;
   color: white;
   text-decoration: none;
 }
