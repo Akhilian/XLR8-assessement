@@ -1,8 +1,11 @@
 import React, { PureComponent, Fragment } from "react";
 import Question from "../components/Question";
 import SwipeableViews from 'react-swipeable-views';
+import { bindKeyboard } from 'react-swipeable-views-utils';
 import API from "../api";
 import SwipeIcon from "../components/SwipeIcon";
+
+const BindKeyboardSwipeableViews = bindKeyboard(SwipeableViews);
 
 export default class Survey extends PureComponent {
     constructor(props) {
@@ -35,14 +38,14 @@ export default class Survey extends PureComponent {
         const { index, respondent } = this.state;
         return (
             <Fragment>
-                <SwipeableViews resistance enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
+                <BindKeyboardSwipeableViews resistance enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
                     {this.state.capabilities.map((capability, index) => (
                         <Fragment key={index}>
                             <Question id={index} capability={capability} respondent={respondent} />
                             <SwipeIcon />
                         </Fragment>
                     ))}
-                </SwipeableViews>
+                </BindKeyboardSwipeableViews>
             </Fragment>
         )
     }
