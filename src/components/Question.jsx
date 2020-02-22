@@ -75,7 +75,7 @@ export default class Question extends PureComponent {
                     <div className="scale">
                         <div className="scale-left">Pas du tout<br /> d'accord</div>
                         <div>Sans avis</div>
-                        <div className="scale-right">Complètement<br />d'accord</div>
+                        <div className="scale-right">Tout à fait<br />d'accord</div>
                     </div>
                 </div>
                 {capability.description && (<div className="description">
