@@ -34,7 +34,7 @@ export default class Survey extends PureComponent {
         });
     }
 
-    render() {
+    render() {        
         const { index, respondent } = this.state;
         return (
             <Fragment>
