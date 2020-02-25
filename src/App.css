@@ -225,18 +225,7 @@ input[type=radio]:checked ~ label {
   justify-content: center;
 }
 
-.swipe-explaination {
-  display: none;
-}
-
-@media screen and (min-width: 480px) {
-  .swipe-explaination {
-    display: block
-  }
-}
-
 /* WHO */
-
 .who {
   display: flex;
   flex-direction: column;
