@@ -15,7 +15,7 @@ export default class Question extends PureComponent {
 
 
     handleOptionChange = (event) => {
-        const { capability, respondent } = this.props
+        const { capability, respondent, goToNextQuestion } = this.props
         const { response } = this.state
         const note = event.target.value
 
@@ -25,6 +25,7 @@ export default class Question extends PureComponent {
         api.saveOrUpdateResponse({ respondent, capability, note, response })
             .then((response) => {
                 this.setState({response, isSavingAnswer: false})
+                goToNextQuestion()
             })
     }
 
@@ -87,6 +88,7 @@ export default class Question extends PureComponent {
 }
 
 Question.propTypes = {
+    goToNextQuestion: PropTypes.func.isRequired,
     capability: PropTypes.instanceOf(Capability).isRequired,
     respondent: PropTypes.instanceOf(Respondent).isRequired,
     id: PropTypes.number.isRequired

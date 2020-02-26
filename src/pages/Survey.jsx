@@ -30,6 +30,10 @@ class Survey extends PureComponent {
     }
   }
 
+  goToNextQuestion = (index) => {
+    this.setState({ index: index + 1 })
+  }
+
   handleChangeIndex = (index) => {
     this.setState({
       index,
@@ -53,10 +57,13 @@ class Survey extends PureComponent {
           <BindKeyboardSwipeableViews resistance enableMouseEvents index={index} onChangeIndex={this.handleChangeIndex}>
             {this.state.capabilities.map((capability, index) => (
                 <Fragment key={index}>
-                  <Question id={index} capability={capability} respondent={respondent}/>
+                  <Question id={index} capability={capability} respondent={respondent} goToNextQuestion={() => this.goToNextQuestion(index)}/>
                   <SwipeIcon/>
                 </Fragment>
             ))}
+            <Fragment>
+              <h1>Merci !</h1>
+            </Fragment>
           </BindKeyboardSwipeableViews>
         </Fragment>
     )
