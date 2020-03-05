@@ -249,3 +249,8 @@ input[type=radio]:checked ~ label {
 .who label {
   font-size: 2rem;
 }
+
+/* capability-results */
+.capability-results {
+  background-color: #233558;
+}
